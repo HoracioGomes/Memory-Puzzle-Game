@@ -16,44 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Game Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-lX-b9b">
-                                <rect key="frame" x="20" y="40" width="88" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Mode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFC-lX-b9b">
+                                <rect key="frame" x="20" y="44" width="88" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="YUa-u0-BnK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIk-zJ-ewA">
-                                <rect key="frame" x="468" y="1012" width="88" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.49885922430000001" green="0.98727767740000005" blue="0.50877739749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Orb-4r-Nos">
-                                <rect key="frame" x="138" y="35" width="340" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Orb-4r-Nos">
+                                <rect key="frame" x="128" y="44" width="240" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9hG-rh-InY"/>
+                                </constraints>
                                 <segments>
                                     <segment title="4 X 4"/>
                                     <segment title="6 X 6"/>
                                     <segment title="8 X 8"/>
                                 </segments>
+                                <connections>
+                                    <action selector="gameModeAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="ym5-NL-BB2"/>
+                                </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUh-un-mt6">
-                                <rect key="frame" x="521" y="40" width="405" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LUh-un-mt6">
+                                <rect key="frame" x="388" y="44" width="67.5" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="2Oy-Na-6Ye"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reset"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Qu-1G-6HI"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-b3-6cb">
-                                <rect key="frame" x="40" y="186" width="944" height="778"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VZB-b3-6cb">
+                                <rect key="frame" x="20" y="95" width="984" height="984"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" secondItem="VZB-b3-6cb" secondAttribute="width" multiplier="1:1" id="5nZ-VN-TC4"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUG-ZE-mN4">
-                                <rect key="frame" x="96" y="1081" width="833" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIk-zJ-ewA">
+                                <rect key="frame" x="412" y="1099" width="200" height="50"/>
+                                <color key="backgroundColor" red="0.49885922430000001" green="0.98727767740000005" blue="0.50877739749999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LpL-NS-GeJ"/>
+                                    <constraint firstAttribute="width" constant="200" id="hSc-sH-r4h"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Won" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qUG-ZE-mN4">
+                                <rect key="frame" x="20" y="1169" width="984" height="19.5"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
@@ -62,7 +78,28 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dFC-lX-b9b" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="622-8S-FKV"/>
+                            <constraint firstItem="LUh-un-mt6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="GDu-6W-pWf"/>
+                            <constraint firstItem="LUh-un-mt6" firstAttribute="leading" secondItem="Orb-4r-Nos" secondAttribute="trailing" constant="20" id="HzK-tJ-pgZ"/>
+                            <constraint firstItem="VZB-b3-6cb" firstAttribute="top" secondItem="Orb-4r-Nos" secondAttribute="bottom" constant="20" id="Lba-gV-TqJ"/>
+                            <constraint firstItem="dFC-lX-b9b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="PKy-z9-ixL"/>
+                            <constraint firstItem="qUG-ZE-mN4" firstAttribute="top" secondItem="wIk-zJ-ewA" secondAttribute="bottom" constant="20" id="TKc-sN-mef"/>
+                            <constraint firstItem="qUG-ZE-mN4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UF3-kI-0r6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qUG-ZE-mN4" secondAttribute="trailing" constant="20" id="Wiw-6J-Ffd"/>
+                            <constraint firstItem="wIk-zJ-ewA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fPZ-AU-tAQ"/>
+                            <constraint firstItem="wIk-zJ-ewA" firstAttribute="top" secondItem="VZB-b3-6cb" secondAttribute="bottom" constant="20" id="g0r-ab-O1h"/>
+                            <constraint firstItem="Orb-4r-Nos" firstAttribute="leading" secondItem="dFC-lX-b9b" secondAttribute="trailing" constant="20" id="jQm-9R-Mna"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VZB-b3-6cb" secondAttribute="trailing" constant="20" id="onF-Xn-fMs"/>
+                            <constraint firstItem="VZB-b3-6cb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="scc-8X-DqX"/>
+                            <constraint firstItem="Orb-4r-Nos" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="vEb-XJ-9cj"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="gameView" destination="VZB-b3-6cb" id="M5F-ba-pn1"/>
+                        <outlet property="timeLabel" destination="wIk-zJ-ewA" id="JN1-a3-Ch8"/>
+                        <outlet property="wonLabel" destination="qUG-ZE-mN4" id="WwS-6M-xSQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
