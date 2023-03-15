@@ -15,10 +15,13 @@ class ViewController: UIViewController {
     
     var gameMode: Int = 4
     var tileSize: CGFloat!
+    var tilesArray: Array<LabelCard> = []
+    var centerArray: Array<CGPoint> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeTiles()
+        randomizeTiles()
     }
 
     @IBAction func resetAction(_ sender: Any) {
@@ -28,6 +31,8 @@ class ViewController: UIViewController {
     }
     
     func makeTiles(){
+        tilesArray = []
+        centerArray = []
         tileSize = gameView.frame.size.width / CGFloat ( gameMode )
         let tileCGSize = CGSize(width: tileSize-5, height: tileSize-5)
         var xCenter = tileSize / 2.0
@@ -48,14 +53,31 @@ class ViewController: UIViewController {
                 }
                 counter += 1
                 tile.center = tileCenter
-                xCenter += tileSize
                 tile.backgroundColor = UIColor.black
+                
+                tilesArray.append(tile)
+                centerArray.append(tileCenter)
+                
+                xCenter += tileSize
                 gameView.addSubview(tile)
             }
             xCenter = tileSize / 2
             yCenter += tileSize
         }
         
+    }
+    
+    func randomizeTiles(){
+        
+        var tempCenterArray = centerArray
+        
+       for anyTile in tilesArray{
+            
+           let index : Int = Int (arc4random_uniform(UInt32(tempCenterArray.count)))
+           let randomCenter = tempCenterArray[index]
+           anyTile.center = randomCenter
+           tempCenterArray.remove(at: index)
+        }
     }
 }
 
