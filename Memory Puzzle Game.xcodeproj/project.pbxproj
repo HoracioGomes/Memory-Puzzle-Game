@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9687F9A629C25E250027FC21 /* LabelCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9687F9A529C25E250027FC21 /* LabelCard.swift */; };
 		96DECF7B29C0E8C1009F42A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DECF7A29C0E8C1009F42A2 /* AppDelegate.swift */; };
 		96DECF7D29C0E8C1009F42A2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DECF7C29C0E8C1009F42A2 /* SceneDelegate.swift */; };
 		96DECF7F29C0E8C1009F42A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DECF7E29C0E8C1009F42A2 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9687F9A529C25E250027FC21 /* LabelCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCard.swift; sourceTree = "<group>"; };
 		96DECF7729C0E8C1009F42A2 /* Memory Puzzle Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Memory Puzzle Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DECF7A29C0E8C1009F42A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96DECF7C29C0E8C1009F42A2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		96DECF7929C0E8C1009F42A2 /* Memory Puzzle Game */ = {
 			isa = PBXGroup;
 			children = (
+				9687F9A529C25E250027FC21 /* LabelCard.swift */,
 				96DECF7A29C0E8C1009F42A2 /* AppDelegate.swift */,
 				96DECF7C29C0E8C1009F42A2 /* SceneDelegate.swift */,
 				96DECF7E29C0E8C1009F42A2 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9687F9A629C25E250027FC21 /* LabelCard.swift in Sources */,
 				96DECF7F29C0E8C1009F42A2 /* ViewController.swift in Sources */,
 				96DECF7B29C0E8C1009F42A2 /* AppDelegate.swift in Sources */,
 				96DECF7D29C0E8C1009F42A2 /* SceneDelegate.swift in Sources */,
