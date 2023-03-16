@@ -17,11 +17,20 @@ class ViewController: UIViewController {
     var tileSize: CGFloat!
     var tilesArray: Array<LabelCard> = []
     var centerArray: Array<CGPoint> = []
+    var gameTime: Int = 0
+    var timerGame: Timer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         makeTiles()
         randomizeTiles()
+        
+        if(timerGame != nil){
+            timerGame.invalidate()
+            timeLabel.text = "00 : 00"
+        }
+        
+        timerGame = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(increaseTime), userInfo: nil, repeats: true)
     }
 
     @IBAction func resetAction(_ sender: Any) {
@@ -72,12 +81,18 @@ class ViewController: UIViewController {
         var tempCenterArray = centerArray
         
        for anyTile in tilesArray{
-            
            let index : Int = Int (arc4random_uniform(UInt32(tempCenterArray.count)))
            let randomCenter = tempCenterArray[index]
            anyTile.center = randomCenter
            tempCenterArray.remove(at: index)
         }
+    }
+    
+    @objc func increaseTime(){
+        gameTime += 1
+        let timeMin = String(format: "%02d", gameTime / 60)
+        let timeSec = String(format: "%02d", gameTime % 60)
+        timeLabel.text = "\(timeMin) : \(timeSec)"
     }
 }
 
