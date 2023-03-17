@@ -26,7 +26,7 @@ extension ViewController{
                 tile.textColor = UIColor.white
                 tile.internalNumber = counter
                 tile.isUserInteractionEnabled = true
-                tile.text = "\(tile.internalNumber!)"
+                tile.text = "\(LabelCard.question)"
                 if(counter == gameMode * gameMode / 2){
                     counter = 0
                 }

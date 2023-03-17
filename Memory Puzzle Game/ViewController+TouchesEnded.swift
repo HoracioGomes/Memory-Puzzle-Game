@@ -13,7 +13,7 @@ extension ViewController{
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
          let myTouche = touches.first
             if let touchedTile = myTouche?.view as? LabelCard{
-            print("Internal number is: \(touchedTile.internalNumber!)")
+            flipToReveal(tile: touchedTile)
         }
     }
 }
