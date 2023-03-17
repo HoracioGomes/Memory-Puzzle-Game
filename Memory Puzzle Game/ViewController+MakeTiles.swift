@@ -25,6 +25,7 @@ extension ViewController{
                 tile.textAlignment = NSTextAlignment.center
                 tile.textColor = UIColor.white
                 tile.internalNumber = counter
+                tile.isUserInteractionEnabled = true
                 tile.text = "\(tile.internalNumber!)"
                 if(counter == gameMode * gameMode / 2){
                     counter = 0

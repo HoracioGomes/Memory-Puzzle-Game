@@ -11,14 +11,6 @@ extension ViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeTiles()
-        randomizeTiles()
-        
-        if(timerGame != nil){
-            timerGame.invalidate()
-            timeLabel.text = "00 : 00"
-        }
-        
-        timerGame = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(increaseTime), userInfo: nil, repeats: true)
+        self.resetAction(self)
     }
 }
