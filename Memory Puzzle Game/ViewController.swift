@@ -17,7 +17,11 @@ class ViewController: UIViewController {
     var tileSize: CGFloat!
     var tilesArray: Array<LabelCard> = []
     var centerArray: Array<CGPoint> = []
+    var foundTilesArray: Array<LabelCard> = []
     var gameTime: Int = 0
     var timerGame: Timer!
+    var firstTile: LabelCard!
+    var secondTile: LabelCard!
+    var compareNow = false
 }
 

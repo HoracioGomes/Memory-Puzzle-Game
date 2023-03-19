@@ -13,7 +13,15 @@ extension ViewController{
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
          let myTouche = touches.first
             if let touchedTile = myTouche?.view as? LabelCard{
-            flipToReveal(tile: touchedTile)
+                if (compareNow){
+                    secondTile = touchedTile
+                    revealAndCompare(tile: secondTile)
+                }else{
+                    firstTile = touchedTile
+                    flipToReveal(tile: firstTile)
+                }
+                
+                compareNow = !compareNow
         }
     }
 }

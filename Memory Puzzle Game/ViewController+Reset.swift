@@ -9,7 +9,8 @@ import UIKit
 
 extension ViewController {
     @IBAction func resetAction(_ sender: Any) {
-        
+        foundTilesArray = []
+        wonLabel.isHidden = true
         for any in tilesArray {
             any.removeFromSuperview()
         }
