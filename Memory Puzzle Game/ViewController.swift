@@ -23,5 +23,6 @@ class ViewController: UIViewController {
     var firstTile: LabelCard!
     var secondTile: LabelCard!
     var compareNow = false
+    var aTileIsAnimating = false
 }
 

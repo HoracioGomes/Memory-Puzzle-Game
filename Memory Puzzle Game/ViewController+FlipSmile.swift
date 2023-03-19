@@ -18,6 +18,8 @@ extension ViewController{
             tile.backgroundColor = UIColor.green
             tile.text = "\(LabelCard.smile)"
         },
-        completion: nil)
+        completion: { (res) in
+            self.aTileIsAnimating = false
+        })
     }
 }

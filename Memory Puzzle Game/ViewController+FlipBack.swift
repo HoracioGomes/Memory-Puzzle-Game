@@ -18,6 +18,8 @@ extension ViewController{
             tile.backgroundColor = UIColor.black
             tile.text = "\(LabelCard.question)"
         },
-        completion: nil)
+        completion: { (res) in
+            self.aTileIsAnimating = false
+        })
     }
 }

@@ -11,9 +11,20 @@ extension ViewController{
     
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if(aTileIsAnimating){
+            return
+        }
          let myTouche = touches.first
             if let touchedTile = myTouche?.view as? LabelCard{
+                if(foundTilesArray.contains(touchedTile)){
+                    return
+                }
+                aTileIsAnimating = true
                 if (compareNow){
+                    if(touchedTile == firstTile){
+                        aTileIsAnimating = false
+                        return
+                    }
                     secondTile = touchedTile
                     revealAndCompare(tile: secondTile)
                 }else{

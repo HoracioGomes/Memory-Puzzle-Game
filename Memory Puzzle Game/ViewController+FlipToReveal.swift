@@ -6,16 +6,19 @@
 //
 
 import UIKit
-
-func flipToReveal(tile: LabelCard)
-{
-    UIView.transition(with: tile,
-                      duration: 0.5,
-                      options: UIView.AnimationOptions.transitionFlipFromLeft,
-                      animations: {
-        tile.backgroundColor = UIColor.red
-        tile.text = "\(tile.internalNumber!)"
-        
-    },
-                      completion: nil)
+extension ViewController{
+    func flipToReveal(tile: LabelCard)
+    {
+        UIView.transition(with: tile,
+                          duration: 0.5,
+                          options: UIView.AnimationOptions.transitionFlipFromLeft,
+                          animations: {
+            tile.backgroundColor = UIColor.red
+            tile.text = "\(tile.internalNumber!)"
+            
+        },
+                          completion: { (res) in
+            self.aTileIsAnimating = false
+        })
+    }
 }

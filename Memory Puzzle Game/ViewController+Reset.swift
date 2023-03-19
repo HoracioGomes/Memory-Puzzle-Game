@@ -11,6 +11,9 @@ extension ViewController {
     @IBAction func resetAction(_ sender: Any) {
         foundTilesArray = []
         wonLabel.isHidden = true
+        firstTile = nil
+        secondTile = nil
+        compareNow = false
         for any in tilesArray {
             any.removeFromSuperview()
         }
